@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+        <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+
+</head>
+<body>
+    <a href="sign-in.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 ml-6 mt-12">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+</svg>  
+    </a>
+    <div>
+        <p class="leading-7 font-semibold text-2xl ml-6 mt-14 text-[#181725]">Enter your mobile number</p>
+        <p class="text-[#7C7C7C] leading-7 ml-6 mt-6">Mobile Number</p>
+    </div>
+
+    <!-- Phone Input (intl-tel-input) -->
+    <div class="mx-6 mt-4">
+        <!-- <label class="text-sm text-gray-600">Phone Number</label> -->
+        <input 
+            id="phone" 
+            type="tel" 
+            class="w-full border-b border-gray-300 py-3 bg-transparent outline-none text-gray-800"
+        />
+    </div>
+    
+<div>
+    <a href="verification.html">
+       <button class="bg-[#53B175] w-[70%] text-white py-3 rounded-2xl font-medium rounded-lg ml-[15%] mt-[90%]">
+        <p class="flex justify-center items-center">Next<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+</svg>
+</p>
+    </button>         
+    </a>
+
+</div>
+
+<!-- intl-tel-input JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
+<script>
+    const input = document.querySelector("#phone");
+
+    const iti = window.intlTelInput(input, {
+        initialCountry: "bd",
+        preferredCountries: ["bd", "ng", "gh", "us", "gb"],
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js",
+    });
+</script>
+
+</body>
+</html>

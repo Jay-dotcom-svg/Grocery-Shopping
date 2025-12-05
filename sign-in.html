@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- intl-tel-input CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/css/intlTelInput.css" />
+</head>
+
+<body>
+<div class="min-h-screen bg-white flex flex-col">
+    
+    <!-- Top Image Section -->
+    <div class="w-full">
+        <img 
+            src="/imgs/Mask Group.png"
+            alt="Groceries" 
+            class="w-full object-fill"
+        />
+    </div>
+
+    <!-- Text -->
+    <div class="mx-6">
+        <h1 class="text-2xl font-semibold mt-6">Get your groceries</h1>
+        <p class="text-2xl font-semibold mb-4">with nectar</p>
+    </div>
+
+    <!-- Phone Input (intl-tel-input) -->
+    <div class="mx-6 mt-4">
+        <!-- <label class="text-sm text-gray-600">Phone Number</label> -->
+        <input 
+            id="phone" 
+            type="tel" 
+            class="w-full border-b border-gray-300 py-3 bg-transparent outline-none text-gray-800"
+        />
+    </div>
+
+    <div class="flex items-center gap-2 mt-8 mb-4">
+        <div class="flex-1 h-px bg-gray-300"></div>
+        <p class="text-gray-400 text-xs">Or connect with social media</p>
+        <div class="flex-1 h-px bg-gray-300"></div>
+    </div>
+
+       <a href="/phone.html">
+     <div class="mx-6 mt-8">   
+
+        <!-- Google Button -->
+        <button class="w-full bg-[#5383EC] text-white py-3 rounded-2xl font-medium mb-4 flex justify-evenly items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 512 512" class="size-6">
+                <path d="M500 261.8C500 403.3 403.1 504 260 504 122.8 504 12 393.2 12 256S122.8 8 260 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9c-88.3-85.2-252.5-21.2-252.5 118.2 0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9l-140.8 0 0-85.3 236.1 0c2.3 12.7 3.9 24.9 3.9 41.4z"/>
+            </svg>
+            <p>Continue with Google</p>
+        </button>
+
+        <!-- Facebook Button -->
+        <button class="w-full bg-[#4A66AC] text-white py-3 rounded-xl font-medium flex justify-evenly items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 320 512" class="size-6">
+                <path d="M80 299.3l0 212.7 116 0 0-212.7 86.5 0 18-97.8-104.5 0 0-34.6c0-51.7 20.3-71.5 72.7-71.5 16.3 0 29.4 .4 37 1.2l0-88.7C291.4 4 256.4 0 236.2 0 129.3 0 80 50.5 80 159.4l0 42.1-66 0 0 97.8 66 0z"/>
+            </svg>
+            <p>Continue with Facebook</p>
+        </button>       
+
+    </div>       
+       </a>
+
+</div>
+
+<!-- intl-tel-input JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/intlTelInput.min.js"></script>
+
+<script>
+    const input = document.querySelector("#phone");
+
+    const iti = window.intlTelInput(input, {
+        initialCountry: "bd",
+        preferredCountries: ["bd", "ng", "gh", "us", "gb"],
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/18.2.1/js/utils.js",
+    });
+</script>
+
+</body>
+</html>
